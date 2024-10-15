@@ -1,0 +1,51 @@
+html {
+  font-size: 2.6666666667vw;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 0.5208333333vw;
+  }
+}
+
+*,
+*::before,
+*::after {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #707070;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+.l-main {
+  display: grid;
+  grid-template-rows: 215px 1fr 150px;
+  box-sizing: border-box;
+}
+@media (min-width: 960px) {
+  .l-main {
+    grid-template-rows: 217px 1fr 150px;
+    grid-template-columns: 1fr 20%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
