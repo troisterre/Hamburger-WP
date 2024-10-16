@@ -5,3 +5,15 @@
 //layout //
 @use "./layout/l-header";
 @use "./layout/l-main";
+@use "./layout/l-article";
+@use "./layout/l-sidebar";
+
+//project //
+
+//component //
+@use "./object/component/c-inner";
+@use "./object/component/c-title";
+
+//utility //
+@use "./object/utility/u-flex";
+@use "./object/utility/u-roboto";

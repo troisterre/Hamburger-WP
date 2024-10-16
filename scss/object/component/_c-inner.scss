@@ -1,0 +1,7 @@
+@use "../../foundation/variable" as *;
+.c-inner {
+  margin: 0 auto;
+  &__header {
+    padding: 4rem 3.1rem 4rem 2.4rem;
+  }
+}

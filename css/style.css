@@ -35,6 +35,7 @@ a:hover {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .l-header {
@@ -94,4 +95,80 @@ img {
     grid-template-rows: 217px 1fr 150px;
     grid-template-columns: 1fr 20%;
   }
+}
+
+.l-article {
+  grid-row: 2;
+  grid-column: 1/3;
+}
+@media (min-width: 960px) {
+  .l-article {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+
+.l-sidebar {
+  display: none;
+}
+@media (min-width: 960px) {
+  .l-sidebar {
+    display: block;
+    grid-row: 1/3;
+    grid-column: 2;
+    background-color: #f2ede9;
+  }
+}
+.l-sidebar__body {
+  padding: 82px 0 0 46px;
+}
+.l-sidebar__title {
+  font-size: 3.4rem;
+  margin-bottom: 8.4rem;
+  font-weight: 700;
+}
+.l-sidebar__menu {
+  margin-bottom: 4rem;
+}
+.l-sidebar__menu dt {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+.l-sidebar__lists {
+  margin-left: 2rem;
+}
+.l-sidebar__lists li {
+  margin-bottom: 2.3rem;
+  font-size: 2rem;
+  line-height: 1.45;
+}
+.l-sidebar__lists li:last-child {
+  margin-bottom: 0;
+}
+
+.c-inner {
+  margin: 0 auto;
+}
+.c-inner__header {
+  padding: 4rem 3.1rem 4rem 2.4rem;
+}
+
+.c-title__header {
+  font-size: 40px;
+}
+
+.u-flex, .u-flex__between {
+  display: flex;
+  align-items: center;
+}
+.u-flex__between {
+  justify-content: space-between;
+}
+
+.u-roboto, .u-roboto__bold {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+.u-roboto__bold {
+  font-weight: 700;
 }
