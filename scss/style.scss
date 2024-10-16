@@ -7,12 +7,18 @@
 @use "./layout/l-main";
 @use "./layout/l-article";
 @use "./layout/l-sidebar";
+@use "./layout/l-footer";
 
 //project //
-
+@use "./object/project/p-fv";
+@use "./object/project/p-about";
+@use "./object/project/p.map";
 //component //
 @use "./object/component/c-inner";
 @use "./object/component/c-title";
+@use "./object/component/c-search";
+@use "./object/component/c-button";
+@use "./object/component/c-card";
 
 //utility //
 @use "./object/utility/u-flex";

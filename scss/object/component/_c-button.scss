@@ -1,1 +1,44 @@
 @use "../../foundation/variable" as *;
+.c-button {
+  &__search {
+    min-width: 78px;
+    font-size: 16px;
+    background-color: $color-sidebar;
+    border: 1px solid $color-black;
+    border-radius: 10px;
+    width: 7.8rem;
+    height: 46px;
+    @include breakpoint(tablet) {
+      max-width: 136px;
+    }
+    @include breakpoint(pc) {
+      width: 13.6rem;
+    }
+  }
+  &__sidebar {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 20px;
+    text-align: right;
+    @include breakpoint(tablet) {
+      font-size: 34px;
+    }
+
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+  &__detail {
+    color: $color-card;
+    width: 16.3rem;
+    height: 42px;
+    background-color: $color-white;
+    border-radius: 25px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

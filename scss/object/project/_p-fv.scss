@@ -1,0 +1,39 @@
+@use "../../foundation/variable" as *;
+.p-fv {
+  background-image: url("/image/mainvisual-sp@2x.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 285px;
+
+  @include breakpoint(tablet) {
+    background-image: url("/image/mv_01.jpg");
+    background-size: cover;
+  }
+
+  &__text {
+    position: absolute;
+    display: block;
+    color: $color-white;
+  }
+  &__archive {
+    height: 285px;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    align-items: center;
+  }
+  &__archive::after {
+    content: "";
+    position: absolute;
+    background-image: url("/image/mv-archive__sp.jpg");
+    background-size: cover;
+    background-position: left;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}

@@ -5,4 +5,18 @@
     @extend.u-flex;
     justify-content: space-between;
   }
+  &__column {
+    @extend.u-flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__column-between {
+    @extend.u-flex__column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__center {
+    @extend.u-flex;
+    justify-content: center;
+  }
 }

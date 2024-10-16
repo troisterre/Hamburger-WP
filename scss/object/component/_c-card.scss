@@ -1,0 +1,61 @@
+@use "../../foundation/variable" as *;
+.c-card {
+  &__list {
+    width: 335px;
+    height: 642px;
+    background-image: url("/image/about-card01.jpg");
+    background-size: cover;
+    padding: 1.1rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 20px;
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      width: 48.2%;
+      height: 681px;
+    }
+    @include breakpoint(pc) {
+      width: 47%;
+      height: 119.6rem;
+    }
+  }
+  &__list:nth-child(2) {
+    background-image: url("/image/about-card02.jpg");
+  }
+  &__list:last-child {
+    margin-bottom: 0;
+  }
+
+  &__bar {
+    display: block;
+    width: 33.89px;
+    height: 4px;
+    margin-top: 15.3px;
+    background-color: #ffffff;
+  }
+  &__body {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 7px 10px 15px;
+    height: 124px;
+    margin-bottom: 15px;
+  }
+  &__body:last-child {
+    margin-bottom: 0;
+  }
+
+  &__body h4 {
+    font-size: 22px;
+    color: $color-card;
+    font-weight: 700;
+    margin-bottom: 3px;
+    @include breakpoint(pc) {
+      font-size: 2.4rem;
+    }
+  }
+  &__body p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-card;
+    line-height: calc(23 / 16);
+    height: 64px;
+    overflow: hidden;
+  }
+}

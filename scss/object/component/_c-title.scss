@@ -2,5 +2,36 @@
 .c-title {
   &__header {
     font-size: 40px;
+    line-height: calc(53 / 40);
+    color: $color-fontColor;
+    text-align: center;
+    margin-bottom: 38px;
+    @include breakpoint(pc) {
+      font-size: 64px;
+      line-height: calc(84 / 64);
+    }
+  }
+  &__fv {
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-white;
+  }
+  &__card {
+    font-size: 41px;
+    color: $color-white;
+    line-height: calc(54 / 41);
+    @include breakpoint(pc) {
+      font-size: 8rem;
+    }
+  }
+  &__map {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: calc(45 / 30);
+    color: $color-white;
+    @include breakpoint(pc) {
+      font-size: 36px;
+      line-height: calc(54 / 36);
+    }
   }
 }
