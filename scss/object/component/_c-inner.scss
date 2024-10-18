@@ -2,18 +2,30 @@
 .c-inner {
   margin: 0 auto;
   &__header {
-    padding: 4rem 3.1rem 4rem 2.4rem;
+    @extend.c-inner;
+    padding: 40px 31px 40px 24px;
   }
   &__fv {
-    padding: 11.7rem 2.5rem;
+    @extend.c-inner;
+    padding: 117px 25px;
   }
   &__about {
-    padding: 2rem 2rem 4.9rem 2rem;
+    @extend.c-inner;
+    padding: 20px 20px 49px 20px;
+    @include breakpoint(tablet) {
+      padding: 40px;
+    }
   }
   &__map {
-    padding: 4rem 4rem 5.1rem 4rem;
+    @extend.c-inner;
+    padding: 40px 40px 51px 40px;
+  }
+  &__sidebar {
+    @extend.c-inner;
+    padding: 8.2rem 0 0 4.6rem;
   }
   &__footer {
+    @extend.c-inner;
     padding: 4rem 0;
   }
 }

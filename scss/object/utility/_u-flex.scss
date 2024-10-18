@@ -1,3 +1,4 @@
+@use "../../foundation/variable" as *;
 .u-flex {
   display: flex;
   align-items: center;
@@ -9,9 +10,23 @@
     @extend.u-flex;
     justify-content: center;
     flex-direction: column;
+    @include breakpoint(pc) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__column-row {
+    @extend.u-flex;
+    justify-content: center;
+    flex-direction: column;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      gap: 40px;
+    }
   }
   &__column-between {
-    @extend.u-flex__column;
+    @extend.u-flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
   }
