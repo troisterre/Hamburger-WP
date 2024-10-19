@@ -19,9 +19,8 @@
       gap: 1.4rem;
     }
     @include breakpoint(pc) {
-      max-width: 396px;
-      width: 39.6vw;
-      gap: 1.3rem;
+      width: 39.6rem;
+      gap: 1.3vw;
       font-size: 24px;
     }
   }

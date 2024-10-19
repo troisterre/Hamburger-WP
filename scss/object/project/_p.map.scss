@@ -54,6 +54,9 @@
     height: 2px;
     background-color: #ffffff;
     margin: 20px 0;
+    @include breakpoint(pc) {
+      margin: 55.5px 0 63.5px;
+    }
   }
   &__text {
     width: 100%;

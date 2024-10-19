@@ -5,6 +5,6 @@
   box-sizing: border-box;
   @include breakpoint(pc) {
     grid-template-rows: 217px 1fr 150px;
-    grid-template-columns: 1fr 20%;
+    grid-template-columns: 80% 20%;
   }
 }

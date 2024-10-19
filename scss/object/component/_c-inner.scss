@@ -19,10 +19,13 @@
   &__map {
     @extend.c-inner;
     padding: 40px 40px 51px 40px;
+    @include breakpoint(pc) {
+      padding: 8.3rem 73.7rem 4rem 11.9rem;
+    }
   }
   &__sidebar {
     @extend.c-inner;
-    padding: 8.2rem 0 0 4.6rem;
+    padding: 82px 0 0 4.6vw;
   }
   &__footer {
     @extend.c-inner;

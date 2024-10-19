@@ -63,7 +63,7 @@ li {
 @media (min-width: 960px) {
   .l-main {
     grid-template-rows: 217px 1fr 150px;
-    grid-template-columns: 1fr 20%;
+    grid-template-columns: 80% 20%;
   }
 }
 
@@ -91,21 +91,21 @@ li {
 }
 .l-sidebar__title {
   font-size: 3.4rem;
-  margin-bottom: 8.4rem;
+  margin-bottom: 84px;
   font-weight: 700;
 }
 .l-sidebar__menu {
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
 }
 .l-sidebar__menu dt {
   font-size: 2.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
 }
 .l-sidebar__lists {
-  margin-left: 2rem;
+  margin-left: 20px;
 }
 .l-sidebar__lists li {
-  margin-bottom: 2.3rem;
+  margin-bottom: 23px;
   font-size: 2rem;
   line-height: 1.45;
 }
@@ -244,6 +244,11 @@ li {
   background-color: #ffffff;
   margin: 20px 0;
 }
+@media (min-width: 960px) {
+  .p-map__bar {
+    margin: 55.5px 0 63.5px;
+  }
+}
 .p-map__text {
   width: 100%;
   height: 518px;
@@ -291,8 +296,13 @@ li {
 .c-inner__map {
   padding: 40px 40px 51px 40px;
 }
+@media (min-width: 960px) {
+  .c-inner__map {
+    padding: 8.3rem 73.7rem 4rem 11.9rem;
+  }
+}
 .c-inner__sidebar {
-  padding: 8.2rem 0 0 4.6rem;
+  padding: 82px 0 0 4.6vw;
 }
 .c-inner__footer {
   padding: 4rem 0;
@@ -309,6 +319,7 @@ li {
   .c-title__header {
     font-size: 64px;
     line-height: 1.3125;
+    margin-bottom: 0;
   }
 }
 .c-title__fv {
@@ -324,6 +335,7 @@ li {
 @media (min-width: 960px) {
   .c-title__fv {
     display: block;
+    font-size: 4rem;
   }
 }
 .c-title__card {
@@ -374,9 +386,8 @@ li {
 }
 @media (min-width: 960px) {
   .c-search__form {
-    max-width: 396px;
-    width: 39.6vw;
-    gap: 1.3rem;
+    width: 39.6rem;
+    gap: 1.3vw;
     font-size: 24px;
   }
 }
@@ -452,7 +463,7 @@ li {
   .c-card__list {
     width: 40.2%;
     max-width: 625px;
-    height: 119.6rem;
+    height: 119.3rem;
   }
 }
 .c-card__list:nth-child(2) {
