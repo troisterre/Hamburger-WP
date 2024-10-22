@@ -5,7 +5,6 @@
 //layout //
 @use "./layout/l-header";
 @use "./layout/l-main";
-@use "./layout/l-article";
 @use "./layout/l-sidebar";
 @use "./layout/l-footer";
 
@@ -15,6 +14,7 @@
 @use "./object/project/p.map";
 //component //
 @use "./object/component/c-inner";
+@use "./object/component/c-article";
 @use "./object/component/c-title";
 @use "./object/component/c-search";
 @use "./object/component/c-button";

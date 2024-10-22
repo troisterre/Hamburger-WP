@@ -32,6 +32,11 @@
   }
   &__center {
     @extend.u-flex;
+    align-items: center;
     justify-content: center;
+  }
+  &__column-center {
+    @extend.u-flex;
+    flex-direction: column;
   }
 }

@@ -4,7 +4,10 @@ html {
   font-size: calc(1vw * 1000 / 375);
   line-height: 1.2;
   scroll-behavior: smooth;
-
+  @include breakpoint(tablet) {
+    line-height: 1.2;
+    font-size: 1vw;
+  }
   @include breakpoint(pc) {
     font-size: calc(1vw * 1000 / 1920);
   }

@@ -29,6 +29,7 @@
   }
   &__footer {
     @extend.c-inner;
-    padding: 4rem 0;
+    height: 100%;
+    padding: 40px 0 34px;
   }
 }
