@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 2.6666666667vw;
   line-height: 1.2;
@@ -74,20 +75,29 @@ li {
 }
 
 .l-sidebar {
-  display: none;
+  width: 100%;
+  max-width: 325px;
+  height: 100%;
+  background-color: #f2ede9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  transform: translate(325px);
+  transition: all 1s; /* 移動する速さ */
 }
 @media (min-width: 960px) {
   .l-sidebar {
-    display: block;
+    width: auto;
+    max-width: none;
+    position: static;
     grid-row: 1/3;
+    transform: translate(0);
     grid-column: 2;
-    background-color: #f2ede9;
   }
 }
-.l-sidebar__title {
-  font-size: 3.4rem;
-  margin-bottom: 84px;
-  font-weight: 700;
+.l-sidebar.open {
+  transform: translate(0); /* right0まで-250px移動 */
 }
 .l-sidebar__menu {
   margin-bottom: 40px;
@@ -106,6 +116,24 @@ li {
 }
 .l-sidebar__lists li:last-child {
   margin-bottom: 0;
+}
+.l-sidebar__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0; /* 透明度を0にすることで隠す */
+  transition: opacity 0.1s; /* 透明度の0→1になる速度 */
+}
+.l-sidebar__bg.open {
+  width: 100%;
+  height: 100%;
+  opacity: 1; /* メニューが表示されているときには背景が表示 */
 }
 
 .l-footer {
@@ -172,7 +200,7 @@ li {
   display: block;
 }
 
-.p-info {
+.p-about {
   background-color: #fffdfa;
 }
 
@@ -367,6 +395,11 @@ li {
     line-height: 1.5;
   }
 }
+.c-title__map__sidebar {
+  font-size: 3.4rem;
+  margin-bottom: 84px;
+  font-weight: 700;
+}
 
 .c-search {
   gap: 1.2rem;
@@ -399,6 +432,9 @@ li {
   }
 }
 
+.c-button, .c-button__detail, .c-button__sidebar, .c-button__search {
+  cursor: pointer;
+}
 .c-button__search {
   min-width: 78px;
   font-size: 16px;
@@ -453,7 +489,7 @@ li {
 }
 .c-card__list {
   width: 95%;
-  height: 642px;
+  height: auto;
   background-image: url("/image/about-card01.jpg");
   background-size: cover;
   padding: 11px 15px 15px 15px;
@@ -489,7 +525,7 @@ li {
 .c-card__body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 7px 10px 15px;
-  height: 124px;
+  height: auto;
   margin-bottom: 15px;
 }
 .c-card__body:last-child {
@@ -503,7 +539,7 @@ li {
 }
 @media (min-width: 960px) {
   .c-card__body h4 {
-    font-size: 2.4rem;
+    font-size: 24px;
   }
 }
 .c-card__body p {
@@ -511,8 +547,6 @@ li {
   font-weight: 400;
   color: #3c2b1c;
   line-height: 1.4375;
-  height: 64px;
-  overflow: hidden;
 }
 
 .u-flex, .u-flex__column-center, .u-flex__center, .u-flex__column-between, .u-flex__column-row, .u-flex__column, .u-flex__between {

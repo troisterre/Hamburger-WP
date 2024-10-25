@@ -33,7 +33,7 @@
       <!-- .l-header -->
       <header class="l-header">
         <div class="c-inner__header u-flex__column">
-          <p class="c-button__sidebar u-roboto__bold">Menu</p>
+          <p class="c-button__sidebar u-roboto__bold" id="js-btn">Menu</p>
           <h2 class="c-title__header u-roboto__bold">Hamburger</h2>
           <div class="c-search u-flex__between">
             <input
@@ -135,7 +135,7 @@
           </div>
           <!-- /.c-inner -->
         </section>
-        <!-- /.p-info -->
+        <!-- /.p-about -->
         <section class="p-map">
           <div class="c-inner__map p-map__contents">
             <h3 class="c-title__map">見出しが入ります</h3>
@@ -151,10 +151,10 @@
         </section>
         <!-- /.p-map -->
       </main>
-      <aside class="l-sidebar" id="slide">
+      <aside class="l-sidebar" id="js-menu">
         <div class="c-inner__sidebar">
-          <h4 class="l-sidebar__title u-roboto__bold">Menu</h4>
-          <span class="c-bar"></span>
+          <h4 class="c-title__sidebar u-roboto__bold">Menu</h4>
+          <span class="c-bar__close"></span>
           <dl class="l-sidebar__menu">
             <dt>バーガー</dt>
             <dd>
@@ -194,8 +194,12 @@
             </dd>
           </dl>
         </div>
-        <!-- /.p-sidebar__body -->
+        <!-- /.c-inner__sidebar -->
       </aside>
+      <div class="l-sidebar__bg" id="js-bg">
+        <span class="l-sidebar__cross" id="js-close"></span>
+      </div>
+      <!-- /.l-sidebar__bg -->
 
       <footer class="l-footer">
         <div class="c-inner__footer u-flex__column-center">

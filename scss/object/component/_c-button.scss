@@ -1,6 +1,8 @@
 @use "../../foundation/variable" as *;
 .c-button {
+  cursor: pointer;
   &__search {
+    @extend.c-button;
     min-width: 78px;
     font-size: 16px;
     background-color: $color-sidebar;
@@ -16,6 +18,7 @@
     }
   }
   &__sidebar {
+    @extend.c-button;
     position: absolute;
     top: 10%;
     right: 5%;
@@ -30,6 +33,7 @@
     }
   }
   &__detail {
+    @extend.c-button;
     color: $color-card;
     width: 16.3rem;
     height: 42px;
