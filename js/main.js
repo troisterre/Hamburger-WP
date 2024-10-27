@@ -1,21 +1,33 @@
 $("#js-btn").on("click", function () {
   //クリックされた時
+  //$("#js-bg").fadeIn("fast"); //#menu-bgの.openを削除
   //activeがある時の処理
   if ($(this).hasClass("active")) {
     $(this).removeClass("active"); //activeを削除
+
     $(".l-sidebar").removeClass("open"); //#js-menuの.openを削除
-    $(".l-sidebar__bg").removeClass("open"); //#menu-bgの.openを削除
   } else {
     $(this).addClass("active"); //activeを追加
+    $("#js-bg").fadeIn("fast");
     $(".l-sidebar").addClass("open");
-    $(".l-sidebar__bg").addClass("open");
   }
 });
 
-$(window).resize(function () {
-  //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
-  $("js-btn").removeClass("active");
-  $("#js-menu").hide();
-  $("#js-bg").removeClass("open");
+$("#js-close").on("click", function () {
+  $("#js-bg").fadeOut();
+  if ($(this).hasClass("active")) {
+    $(this).addClass("active");
+  } else {
+    $(this).removeClass("active");
+
+    $(".l-sidebar").removeClass("open");
+  }
 });
-1;
+if (window.matchMedia("(max-width: 960px)").matches) {
+  $(window).resize(function () {
+    //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
+    $("#js-btn").removeClass("active");
+    $(".l-sidebar").removeClass("open");
+    $("#js-bg").hide();
+  });
+}
