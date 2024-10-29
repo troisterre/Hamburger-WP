@@ -317,8 +317,6 @@ li {
 }
 .c-inner__fv {
   padding: 117px 25px;
-  position: absolute;
-  z-index: 50;
 }
 .c-inner__about {
   padding: 20px 20px 49px 20px;
@@ -561,6 +559,7 @@ li {
   .c-card__list {
     width: 40.2%;
     max-width: 625px;
+    height: 119.2rem;
   }
 }
 .c-card__list:nth-child(2) {
