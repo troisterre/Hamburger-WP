@@ -8,23 +8,24 @@
   @include breakpoint(tablet) {
     background-image: url("/image/mainvisual-pc@2x.jpg");
   }
-
   &__text {
     position: absolute;
     display: block;
     color: $color-white;
   }
+  //archive.html  //
   &__archive {
     height: 285px;
     width: 100%;
     background-color: #000000;
     position: relative;
     align-items: center;
+    z-index: 10;
   }
   &__archive::after {
     content: "";
     position: absolute;
-    background-image: url("/image/mv-archive__sp.jpg");
+    background-image: url("/image/mainvisual-sp@2x.jpg");
     background-size: cover;
     background-position: left;
     height: 100%;
@@ -32,6 +33,7 @@
     opacity: 0.5;
     top: 0;
     left: 0;
+    z-index: 20;
     display: block;
   }
 }

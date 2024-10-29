@@ -8,6 +8,8 @@
   &__fv {
     @extend.c-inner;
     padding: 117px 25px;
+    position: absolute;
+    z-index: 50;
   }
   &__about {
     @extend.c-inner;
@@ -31,5 +33,15 @@
     @extend.c-inner;
     height: 100%;
     padding: 40px 0 34px;
+  }
+  //archive.html //
+  &__archive {
+    padding: 102px 0 104px 37px;
+  }
+  &__detail {
+    padding: 30px 18px;
+  }
+  &__card-body {
+    padding: 31.5px 17px 43.7px 17px;
   }
 }

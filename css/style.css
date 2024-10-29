@@ -84,7 +84,7 @@ li {
   right: 0;
   z-index: 30;
   transform: translate(375px);
-  transition: ease-in 0.5s; /* 移動する速さ */
+  transition: all 0.5s; /* 移動する速さ */
 }
 @media (min-width: 560px) {
   .l-sidebar {
@@ -132,7 +132,7 @@ li {
   content: "";
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: all 0.3s; /* 透明度の0→1になる速度 */
+  transition: all 0.1s;
 }
 
 .l-footer {
@@ -184,11 +184,12 @@ li {
   background-color: #000000;
   position: relative;
   align-items: center;
+  z-index: 10;
 }
 .p-fv__archive::after {
   content: "";
   position: absolute;
-  background-image: url("/image/mv-archive__sp.jpg");
+  background-image: url("/image/mainvisual-sp@2x.jpg");
   background-size: cover;
   background-position: left;
   height: 100%;
@@ -196,6 +197,7 @@ li {
   opacity: 0.5;
   top: 0;
   left: 0;
+  z-index: 20;
   display: block;
 }
 
@@ -295,6 +297,17 @@ li {
     line-height: 2.0625;
   }
 }
+.p-map__text span {
+  display: none;
+}
+
+.p-detail {
+  background-color: #fffdfa;
+}
+.p-detail p {
+  line-height: 1.4375;
+  font-size: 16px;
+}
 
 .c-inner, .c-inner__footer, .c-inner__sidebar, .c-inner__map, .c-inner__about, .c-inner__fv, .c-inner__header {
   margin: 0 auto;
@@ -304,6 +317,8 @@ li {
 }
 .c-inner__fv {
   padding: 117px 25px;
+  position: absolute;
+  z-index: 50;
 }
 .c-inner__about {
   padding: 20px 20px 49px 20px;
@@ -327,6 +342,15 @@ li {
 .c-inner__footer {
   height: 100%;
   padding: 40px 0 34px;
+}
+.c-inner__archive {
+  padding: 102px 0 104px 37px;
+}
+.c-inner__detail {
+  padding: 30px 18px;
+}
+.c-inner__card-body {
+  padding: 31.5px 17px 43.7px 17px;
 }
 
 .c-article {
@@ -403,9 +427,42 @@ li {
     font-weight: 700;
   }
 }
+.c-title__archive {
+  color: #fffdfa;
+  font-size: 36px;
+  position: absolute;
+  z-index: 50;
+}
+.c-title__archive h1 {
+  font-size: 36px;
+  line-height: 1.3333333333;
+  margin-bottom: 7px;
+}
+.c-title__archive p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4375;
+}
+.c-title__detail {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 
 .c-search {
   gap: 1.2rem;
+  position: relative;
+}
+.c-search::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: url(../image/search-icon.png) no-repeat center center/auto 100%;
+  width: 24px;
+  height: 24px;
+  top: 25%;
+  left: 16px;
 }
 .c-search__form {
   width: 23rem;
@@ -416,10 +473,6 @@ li {
   font-size: 24px;
   font-weight: 400;
   background-color: #ffffff;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: 100;
-  text-decoration: inherit;
 }
 @media (min-width: 560px) {
   .c-search__form {
@@ -435,7 +488,7 @@ li {
   }
 }
 
-.c-button, .c-button__detail, .c-button__sidebar, .c-button__search {
+.c-button, .c-button__card, .c-button__sidebar, .c-button__search {
   cursor: pointer;
 }
 .c-button__search {
@@ -474,7 +527,7 @@ li {
     display: none;
   }
 }
-.c-button__detail {
+.c-button__card {
   color: #3c2b1c;
   width: 16.3rem;
   height: 42px;
@@ -484,7 +537,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .c-card {
@@ -492,7 +545,7 @@ li {
 }
 .c-card__list {
   width: 95%;
-  height: auto;
+  height: 642px;
   background-image: url("/image/about-card01.jpg");
   background-size: cover;
   padding: 11px 15px 15px 15px;
@@ -552,6 +605,39 @@ li {
 .c-card__body span {
   display: none;
 }
+.c-card__detail {
+  margin: 20px auto;
+}
+.c-card__detail li {
+  margin-bottom: 20px;
+}
+.c-card__detail li:last-child {
+  margin-bottom: 0;
+}
+.c-card__detail figure {
+  width: 100%;
+}
+.c-card__detail img {
+  width: 100%;
+}
+.c-card__detail figcaption {
+  background-color: #3c2b1c;
+  color: #fffdfa;
+}
+.c-card__detail-title {
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.c-card__detail-subtitle {
+  font-size: 16px;
+  line-height: 1.4375;
+  margin: 24px 0 10px;
+}
+.c-card__detail-text {
+  margin-right: 56.1px;
+}
 
 .c-bar__close {
   cursor: pointer;
@@ -583,6 +669,10 @@ li {
   background-color: #707070;
   display: block;
   transform: rotate(90deg);
+}
+
+.c-pagination {
+  margin: 60.4px 0 0 0;
 }
 
 .u-flex, .u-flex__column-center, .u-flex__center, .u-flex__column-between, .u-flex__column-row, .u-flex__column, .u-flex__between {
@@ -617,7 +707,6 @@ li {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 283.7px;
 }
 .u-flex__center {
   align-items: center;

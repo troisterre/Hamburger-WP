@@ -12,6 +12,7 @@
 @use "./object/project/p-fv";
 @use "./object/project/p-about";
 @use "./object/project/p.map";
+@use "./object/project/p-detail";
 //component //
 @use "./object/component/c-inner";
 @use "./object/component/c-article";
@@ -20,7 +21,7 @@
 @use "./object/component/c-button";
 @use "./object/component/c-card";
 @use "./object/component/c-bar";
-
+@use "./object/component/c-pagination";
 //utility //
 @use "./object/utility/u-flex";
 @use "./object/utility/u-roboto";

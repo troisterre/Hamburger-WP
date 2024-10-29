@@ -32,7 +32,8 @@
       display: none;
     }
   }
-  &__detail {
+  //archive.html //
+  &__card {
     @extend.c-button;
     color: $color-card;
     width: 16.3rem;
@@ -43,6 +44,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 40px auto 0;
   }
 }

@@ -1,6 +1,17 @@
 @use "../../foundation/variable" as *;
 .c-search {
   gap: 1.2rem;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url(../image/search-icon.png) no-repeat center center / auto 100%;
+    width: 24px;
+    height: 24px;
+    top: 25%;
+    left: 16px;
+  }
   &__form {
     width: 23rem;
     height: 46px;
@@ -10,10 +21,7 @@
     font-size: 24px;
     font-weight: 400;
     background-color: #ffffff;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: 100;
-    text-decoration: inherit;
+
     @include breakpoint(tablet) {
       width: 396px;
       gap: 1.4rem;

@@ -1,0 +1,8 @@
+@use "../../foundation/variable" as *;
+.p-detail {
+  background-color: $color-white;
+  & p {
+    line-height: calc(23 / 16);
+    font-size: 16px;
+  }
+}
