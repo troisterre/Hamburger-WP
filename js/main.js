@@ -28,6 +28,6 @@ if (window.matchMedia("(max-width: 960px)").matches) {
     //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
     $("#js-btn").removeClass("active");
     $(".l-sidebar").removeClass("open");
-    $("#js-bg").hide();
+    $("#js-bg").fadeOut("fast");
   });
 }

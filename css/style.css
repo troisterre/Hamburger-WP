@@ -65,6 +65,7 @@ li {
 .l-main {
   display: grid;
   grid-template-rows: 215px 1fr 150px;
+  grid-template-columns: 1fr;
   box-sizing: border-box;
 }
 @media (min-width: 960px) {
@@ -75,11 +76,12 @@ li {
 }
 
 .l-sidebar {
-  width: 86%;
+  overflow: auto;
+  width: 100%;
+  min-height: 100vh;
   max-width: 375px;
-  height: 100%;
   background-color: #f2ede9;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 30;
@@ -206,59 +208,48 @@ li {
 }
 
 .p-map {
-  background-color: #000000;
-  height: 691px;
+  height: auto;
+}
+.p-map__bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
   position: relative;
+  background-color: #000000;
 }
 @media (min-width: 560px) {
-  .p-map {
+  .p-map__bg {
     height: 415px;
   }
 }
 @media (min-width: 960px) {
-  .p-map {
+  .p-map__bg {
     height: 649px;
   }
 }
-.p-map::before {
+.p-map__bg::before {
   content: "";
   position: absolute;
-  display: block;
-  background-image: url("/image/map-sp.png");
-  background-size: cover;
-  opacity: 0.6;
-  height: 100%;
-  width: 100%;
   top: 0;
   left: 0;
+  background-image: url("/image/map-sp.png");
+  opacity: 0.6;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-.p-map::after {
+.p-map__bg::after {
   content: "";
+  top: 0;
+  left: 0;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.29);
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 60%;
-  z-index: 5;
-  display: block;
-}
-@media (min-width: 560px) {
-  .p-map::after {
-    height: 100%;
-  }
-}
-@media (min-width: 960px) {
-  .p-map::after {
-    height: 100%;
-    width: 61.17%;
-  }
+  width: 100%;
 }
 .p-map__contents {
-  position: absolute;
-  z-index: 10;
+  z-index: 50;
   opacity: 1;
-  height: 100%;
 }
 .p-map__bar {
   display: block;
@@ -296,9 +287,6 @@ li {
     font-size: 16px;
     line-height: 2.0625;
   }
-}
-.p-map__text span {
-  display: none;
 }
 
 .p-detail {
@@ -467,7 +455,7 @@ li {
   height: 46px;
   border-radius: 10px;
   border: 1px solid #000000;
-  padding: 11px 16px;
+  padding: 11px 16px 11px 50px;
   font-size: 24px;
   font-weight: 400;
   background-color: #ffffff;
@@ -542,8 +530,7 @@ li {
   margin: 0 auto;
 }
 .c-card__list {
-  width: 95%;
-  height: 642px;
+  height: auto;
   background-image: url("/image/about-card01.jpg");
   background-size: cover;
   padding: 11px 15px 15px 15px;
@@ -552,14 +539,14 @@ li {
 @media (min-width: 560px) {
   .c-card__list {
     margin-bottom: 0;
-    width: 41.6%;
+    width: 47%;
   }
 }
 @media (min-width: 960px) {
   .c-card__list {
-    width: 40.2%;
+    width: 47%;
     max-width: 625px;
-    height: 119.2rem;
+    height: auto;
   }
 }
 .c-card__list:nth-child(2) {
@@ -574,6 +561,14 @@ li {
   height: 4px;
   margin-top: 15.3px;
   background-color: #ffffff;
+}
+.c-card__top {
+  padding-bottom: 28.3rem;
+}
+@media (min-width: 960px) {
+  .c-card__top {
+    padding-bottom: 66rem;
+  }
 }
 .c-card__body {
   background-color: rgba(255, 255, 255, 0.8);

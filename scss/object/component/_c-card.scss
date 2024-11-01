@@ -2,20 +2,19 @@
 .c-card {
   margin: 0 auto;
   &__list {
-    width: 95%;
-    height: 642px;
+    height: auto;
     background-image: url("/image/about-card01.jpg");
     background-size: cover;
     padding: 11px 15px 15px 15px;
     margin-bottom: 20px;
     @include breakpoint(tablet) {
       margin-bottom: 0;
-      width: 41.6%;
+      width: 47%;
     }
     @include breakpoint(pc) {
-      width: 40.2%;
+      width: 47%;
       max-width: 625px;
-      height: 119.2rem;
+      height: auto;
     }
   }
   &__list:nth-child(2) {
@@ -31,6 +30,12 @@
     height: 4px;
     margin-top: 15.3px;
     background-color: #ffffff;
+  }
+  &__top {
+    padding-bottom: 28.3rem;
+    @include breakpoint(pc) {
+      padding-bottom: 66rem;
+    }
   }
   &__body {
     background-color: rgba(255, 255, 255, 0.8);

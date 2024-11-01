@@ -2,6 +2,7 @@
 .l-main {
   display: grid;
   grid-template-rows: 215px 1fr 150px;
+  grid-template-columns: 1fr;
   box-sizing: border-box;
   @include breakpoint(pc) {
     grid-template-rows: 217px 1fr 150px;
