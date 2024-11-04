@@ -77,7 +77,7 @@ li {
 
 .l-sidebar {
   overflow: auto;
-  width: 100%;
+  width: 87.5%;
   min-height: 100vh;
   max-width: 375px;
   background-color: #f2ede9;
@@ -85,7 +85,7 @@ li {
   top: 0;
   right: 0;
   z-index: 30;
-  transform: translate(375px);
+  transform: translate(100%);
   transition: all 0.5s; /* 移動する速さ */
 }
 @media (min-width: 560px) {

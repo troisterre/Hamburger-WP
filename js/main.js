@@ -23,6 +23,7 @@ $("#js-close").on("click", function () {
     $(".l-sidebar").removeClass("open");
   }
 });
+
 if (window.matchMedia("(max-width: 960px)").matches) {
   $(window).resize(function () {
     //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
