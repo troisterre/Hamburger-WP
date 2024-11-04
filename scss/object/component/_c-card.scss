@@ -1,6 +1,7 @@
 @use "../../foundation/variable" as *;
 .c-card {
   margin: 0 auto;
+  padding: 0;
   &__list {
     height: auto;
     background-image: url("/image/about-card01.jpg");

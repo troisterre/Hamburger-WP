@@ -19,7 +19,7 @@
     @extend.u-flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     @include breakpoint(tablet) {
       flex-direction: row;
       gap: 40px;

@@ -209,47 +209,25 @@ li {
 
 .p-map {
   height: auto;
-}
-.p-map__bg {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  position: relative;
   background-color: #000000;
 }
+.p-map__bg {
+  background-image: url("/image/map-sp.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+}
+.p-map__transparent {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0 60%, rgba(0, 0, 0, 0.29) 60% 100%);
+}
 @media (min-width: 560px) {
-  .p-map__bg {
-    height: 415px;
+  .p-map__transparent {
+    background: rgba(0, 0, 0, 0.6);
   }
 }
 @media (min-width: 960px) {
-  .p-map__bg {
-    height: 649px;
+  .p-map__transparent {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0 60%, rgba(0, 0, 0, 0.29) 60% 100%);
   }
-}
-.p-map__bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("/image/map-sp.png");
-  opacity: 0.6;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-.p-map__bg::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.29);
-  height: 60%;
-  width: 100%;
-}
-.p-map__contents {
-  z-index: 50;
-  opacity: 1;
 }
 .p-map__bar {
   display: block;
@@ -528,6 +506,7 @@ li {
 
 .c-card {
   margin: 0 auto;
+  padding: 0;
 }
 .c-card__list {
   height: auto;
@@ -689,7 +668,7 @@ li {
 .u-flex__column-row {
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
 }
 @media (min-width: 560px) {
   .u-flex__column-row {
