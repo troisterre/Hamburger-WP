@@ -1,26 +1,22 @@
 @use "../foundation/variable" as *;
 .l-sidebar {
-  overflow: auto;
   width: 87.5%;
-  min-height: 100vh;
-  max-width: 375px;
+  height: auto;
   background-color: $color-sidebar;
   position: absolute;
   top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 30;
+  z-index: 50;
   transform: translate(100%);
-  transition: all 0.5s; /* 移動する速さ */
+  transition: all 0.8s; /* 移動する速さ */
   @include breakpoint(tablet) {
     width: 44%;
   }
   @include breakpoint(pc) {
-    width: auto;
-    max-width: none;
-    position: static;
-    grid-row: 1/3;
+    width: 20%;
     transform: translate(0);
-    grid-column: 2;
+    z-index: 0;
   }
   &.open {
     transform: translate(0); /* right0まで-250px移動 */
@@ -45,7 +41,7 @@
   }
   &__bg {
     display: none;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;

@@ -2,6 +2,10 @@
 .u-flex {
   display: flex;
   align-items: center;
+  &__stretch {
+    align-items: stretch;
+    justify-content: center;
+  }
   &__between {
     @extend.u-flex;
     justify-content: space-between;
@@ -39,5 +43,6 @@
   &__column-center {
     @extend.u-flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 }

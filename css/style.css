@@ -30,6 +30,7 @@ body {
   font-family: "M PLUS 1p", sans-serif;
   color: #707070;
   min-width: 320px;
+  height: 100%;
 }
 
 a {
@@ -51,7 +52,7 @@ li {
 
 .l-header {
   background-color: #fff7ef;
-  grid-column: 1/3;
+  grid-column: 1;
   grid-row: 1;
   position: relative;
 }
@@ -63,30 +64,36 @@ li {
 }
 
 .l-main {
-  display: grid;
-  grid-template-rows: 215px 1fr 150px;
-  grid-template-columns: 1fr;
+  height: auto;
+  position: relative;
   box-sizing: border-box;
+  overflow: visible;
 }
 @media (min-width: 960px) {
   .l-main {
-    grid-template-rows: 217px 1fr 150px;
+    display: grid;
+    grid-template-rows: 1fr 150px;
     grid-template-columns: 80% 20%;
   }
 }
+.l-main__left {
+  height: auto;
+}
+.l-main__right {
+  height: auto;
+}
 
 .l-sidebar {
-  overflow: auto;
   width: 87.5%;
-  min-height: 100vh;
-  max-width: 375px;
+  height: auto;
   background-color: #f2ede9;
   position: absolute;
   top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 30;
+  z-index: 50;
   transform: translate(100%);
-  transition: all 0.5s; /* 移動する速さ */
+  transition: all 0.8s; /* 移動する速さ */
 }
 @media (min-width: 560px) {
   .l-sidebar {
@@ -95,12 +102,9 @@ li {
 }
 @media (min-width: 960px) {
   .l-sidebar {
-    width: auto;
-    max-width: none;
-    position: static;
-    grid-row: 1/3;
+    width: 20%;
     transform: translate(0);
-    grid-column: 2;
+    z-index: 0;
   }
 }
 .l-sidebar.open {
@@ -126,7 +130,7 @@ li {
 }
 .l-sidebar__bg {
   display: none;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -141,13 +145,19 @@ li {
   background-image: url("/image/footer-bg.png");
   background-size: cover;
   text-align: center;
-  grid-row: 3;
-  grid-column: 1/3;
+  height: 150px;
+}
+@media (min-width: 960px) {
+  .l-footer {
+    display: grid;
+    grid-row: 2;
+    grid-column: 1/3;
+    z-index: 10;
+  }
 }
 .l-footer__link li {
   border-right: 2.7px solid #fffdfa;
   padding: 0 10px;
-  margin-bottom: 34px;
 }
 .l-footer__link li:last-child {
   border: none;
@@ -302,6 +312,7 @@ li {
 }
 .c-inner__sidebar {
   padding: 25px 17px 0 46px;
+  margin-bottom: auto;
 }
 .c-inner__footer {
   height: 100%;
@@ -652,6 +663,10 @@ li {
   display: flex;
   align-items: center;
 }
+.u-flex__stretch {
+  align-items: stretch;
+  justify-content: center;
+}
 .u-flex__between {
   justify-content: space-between;
 }
@@ -687,6 +702,7 @@ li {
 }
 .u-flex__column-center {
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .u-roboto, .u-roboto__bold {

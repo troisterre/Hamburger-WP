@@ -1,11 +1,19 @@
 @use "../foundation/variable" as *;
 .l-main {
-  display: grid;
-  grid-template-rows: 215px 1fr 150px;
-  grid-template-columns: 1fr;
+  height: auto;
+  position: relative;
   box-sizing: border-box;
+  overflow: visible;
   @include breakpoint(pc) {
-    grid-template-rows: 217px 1fr 150px;
+    display: grid;
+    grid-template-rows: 1fr 150px;
     grid-template-columns: 80% 20%;
+  }
+  &__left {
+    height: auto;
+  }
+
+  &__right {
+    height: auto;
   }
 }
