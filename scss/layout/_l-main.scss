@@ -11,6 +11,11 @@
   }
   &__left {
     height: auto;
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+    }
   }
 
   &__right {

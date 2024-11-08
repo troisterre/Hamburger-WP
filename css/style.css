@@ -79,13 +79,18 @@ li {
 .l-main__left {
   height: auto;
 }
+.l-main__left.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
 .l-main__right {
   height: auto;
 }
 
 .l-sidebar {
   width: 87.5%;
-  height: auto;
+  height: 100vh;
   background-color: #f2ede9;
   position: absolute;
   top: 0;
@@ -94,6 +99,7 @@ li {
   z-index: 50;
   transform: translate(100%);
   transition: all 0.8s; /* 移動する速さ */
+  overflow-y: scroll;
 }
 @media (min-width: 560px) {
   .l-sidebar {
@@ -132,7 +138,7 @@ li {
   display: none;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
   content: "";
