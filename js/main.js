@@ -20,7 +20,7 @@ $("#js-close").on("click", function () {
     $(this).addClass("active");
   } else {
     $(this).removeClass("active");
-
+    $(".l-main__left").removeClass("fixed");
     $(".l-sidebar").removeClass("open");
   }
 });
@@ -30,6 +30,7 @@ if (window.matchMedia("(max-width: 960px)").matches) {
     //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
     $("#js-btn").removeClass("active");
     $(".l-sidebar").removeClass("open");
+    $(".l-main__left").removeClass("fixed");
     $("#js-bg").fadeOut("fast");
   });
 }
