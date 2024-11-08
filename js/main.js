@@ -1,3 +1,13 @@
+$(window).resize(function () {
+  //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
+  if (window.matchMedia("(max-width: 960px)").matches) {
+    $("#js-btn").removeClass("active");
+    $(".l-sidebar").removeClass("open");
+    $("#js-bg").fadeOut("fast");
+    $(".l-main__left").removeClass("fixed");
+  }
+});
+
 $("#js-btn").on("click", function () {
   //クリックされた時
   //$("#js-bg").fadeIn("fast"); //#menu-bgの.openを削除
@@ -24,13 +34,3 @@ $("#js-close").on("click", function () {
     $(".l-sidebar").removeClass("open");
   }
 });
-
-if (window.matchMedia("(max-width: 960px)").matches) {
-  $(window).resize(function () {
-    //ここにブラウザのウィンドウがリサイズされたときに処理する内容を記述
-    $("#js-btn").removeClass("active");
-    $(".l-sidebar").removeClass("open");
-    $("#js-bg").fadeOut("fast");
-    $(".l-main__left").removeClass("fixed");
-  });
-}
