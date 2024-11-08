@@ -16,6 +16,7 @@
   }
   @include breakpoint(pc) {
     width: 20%;
+    height: auto;
     transform: translate(0);
     z-index: 0;
   }
