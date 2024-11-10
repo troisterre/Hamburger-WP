@@ -39,4 +39,10 @@
     left: 0;
     display: block;
   }
+  // single.html //
+  &__single {
+    @extend.p-fv;
+    background-image: url("/image/mainVisual_single.jpg");
+    height: 225px;
+  }
 }

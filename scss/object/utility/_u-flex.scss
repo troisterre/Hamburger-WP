@@ -79,4 +79,11 @@
       gap: 19px;
     }
   }
+  &__singleList {
+    @extend.u-flex;
+  }
+  &__singleList-rev {
+    @extend.u-flex;
+    flex-direction: row-reverse;
+  }
 }
