@@ -1,0 +1,10 @@
+@use "../../foundation/variable" as *;
+.c-image {
+  &__list {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__list:last-child {
+    margin-bottom: 0;
+  }
+}

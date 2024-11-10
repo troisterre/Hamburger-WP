@@ -28,4 +28,16 @@
     width: 100%;
     height: 124px;
   }
+  &__single-figure {
+    width: 43%;
+  }
+  &__single-figcaption {
+    width: 54.6%;
+  }
+  &__img-second {
+    width: 267px;
+    height: 166px;
+    display: block;
+    margin: 0 auto 30px auto;
+  }
 }
