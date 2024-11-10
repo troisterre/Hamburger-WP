@@ -48,7 +48,10 @@
     }
   }
   &__card-body {
-    padding: 31.5px 59px 40px 34.72px;
+    padding: 31.5px 16px 43.6px;
+    @include breakpoint(tablet) {
+      padding: 31.5px 59px 40px 34.72px;
+    }
     @include breakpoint(pc) {
       padding: 5.6rem 10.4rem 6rem 6.3rem;
     }

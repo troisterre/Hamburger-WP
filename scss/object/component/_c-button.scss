@@ -44,7 +44,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 45px auto 0;
+    margin: 40px auto 0;
+    @include breakpoint(tablet) {
+      margin: 45px auto 0;
+    }
     @include breakpoint(pc) {
       width: 29.2rem;
       margin: 6rem auto 0;

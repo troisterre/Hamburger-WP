@@ -1,6 +1,9 @@
 @use "../../foundation/variable" as *;
 .c-pagination {
   &__sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 60.4px 0 0 0;
     @include breakpoint(tablet) {
       display: none;
@@ -12,7 +15,9 @@
   &__tablet {
     display: none;
     @include breakpoint(tablet) {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 106.5px auto 0;
     }
   }
