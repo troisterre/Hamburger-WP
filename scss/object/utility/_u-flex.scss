@@ -45,4 +45,38 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  &__column-start {
+    @extend.u-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  // archive.html
+  &__column-column {
+    @extend.u-flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__menuInfo {
+    @extend.u-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+    }
+  }
+  &__archive-fv {
+    @extend.u-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 19px;
+    }
+  }
 }

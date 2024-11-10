@@ -1,7 +1,7 @@
 @use "../../foundation/variable" as *;
-.p-detail {
+.p-menuInfo {
   background-color: $color-white;
-  & p {
+  &__text {
     line-height: calc(23 / 16);
     font-size: 16px;
   }
