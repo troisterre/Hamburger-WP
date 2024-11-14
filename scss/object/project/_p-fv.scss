@@ -44,5 +44,11 @@
     @extend.p-fv;
     background-image: url("/image/mainVisual_single.jpg");
     height: 225px;
+    @include breakpoint(tablet) {
+      height: 505px;
+    }
+    @include breakpoint(pc) {
+      height: 500px;
+    }
   }
 }

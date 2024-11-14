@@ -3,6 +3,10 @@
   &__list {
     width: 100%;
     margin-bottom: 20px;
+    @include breakpoint(tablet) {
+      width: 48%;
+      margin-bottom: 4px;
+    }
   }
   &__list:last-child {
     margin-bottom: 0;

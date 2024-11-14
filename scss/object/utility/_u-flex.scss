@@ -90,4 +90,10 @@
     flex-direction: row-reverse;
     align-items: flex-start;
   }
+  &__wrap {
+    @extend.u-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
 }

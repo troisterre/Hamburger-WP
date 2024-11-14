@@ -82,10 +82,25 @@
     font-size: 36px;
     color: $color-white;
     font-weight: 700;
+    @include breakpoint(tablet) {
+      font-size: 60px;
+      line-height: calc(89 / 60);
+      margin: 0;
+    }
   }
   &__contents-single {
     font-size: 28px;
     line-height: calc(42 / 28);
     margin-bottom: 25px;
+    color: $color-single;
+    @include breakpoint(tablet) {
+      font-size: 36px;
+      line-height: calc(54 / 36);
+      font-weight: 700;
+      margin-bottom: 55px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5.7rem;
+    }
   }
 }

@@ -1,0 +1,24 @@
+@use "../../foundation/variable" as *;
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+  align-items: center;
+  line-height: calc(24 / 16);
+  & th {
+    border: 1px solid black;
+    width: 42%;
+    padding: 29px 0 24px;
+    font-weight: normal;
+    @include breakpoint(tablet) {
+      width: 30%;
+    }
+  }
+  & td {
+    border: 1px solid black;
+    width: 58%;
+    padding: 29px 0 24px 29px;
+    @include breakpoint(tablet) {
+      width: 70%;
+    }
+  }
+}
