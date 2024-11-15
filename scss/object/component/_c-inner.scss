@@ -72,7 +72,7 @@
       padding: 60px 60px 150px 60px;
     }
     @include breakpoint(pc) {
-      padding: 6.3rem 10rem 42.4rem 10rem;
+      padding: 6.3rem 10rem 27.4rem 10rem;
     }
   }
   &__quote {
@@ -86,5 +86,8 @@
   }
   &__single-tag {
     padding: 50px 59px 50px 49px;
+    @include breakpoint(pc) {
+      padding: 5rem;
+    }
   }
 }

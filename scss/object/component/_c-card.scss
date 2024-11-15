@@ -121,7 +121,6 @@
     }
   }
   &__inner-text {
-    // margin-right: 56.1px;
     @include breakpoint(tablet) {
       margin-right: 0;
     }
@@ -132,6 +131,11 @@
   // single.html // {
   &__single {
     margin: 30px 0;
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(pc) {
+      margin: 6rem 0;
+    }
   }
   &__singleList {
     margin-bottom: 30px;

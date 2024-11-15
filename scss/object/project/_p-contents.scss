@@ -77,19 +77,33 @@
       height: 100%;
       margin: 0 auto 241px;
     }
+    @include breakpoint(pc) {
+      width: 37.4%;
+      height: 35.8rem;
+      margin-bottom: 6rem;
+    }
   }
   &__single-lists {
     margin: 33px 0 24px;
     @include breakpoint(tablet) {
       margin: 61px 0 57px;
     }
+    @include breakpoint(pc) {
+      margin: 5.4rem 0 5.6rem 5rem;
+    }
   }
   &__single-list {
     margin-bottom: 17px;
+    @include breakpoint(pc) {
+      margin-bottom: 1.7rem;
+    }
   }
   &__single-list-pl {
     @extend.p-contents__single-list;
     padding-left: 18px;
+    @include breakpoint(pc) {
+      padding-left: 1.8rem;
+    }
   }
   &__single-tag {
     background-color: #f5f5f5;
@@ -98,8 +112,12 @@
     @include breakpoint(tablet) {
       margin-bottom: 60px;
     }
+    @include breakpoint(pc) {
+      margin-bottom: 5rem;
+    }
   }
   &__single-tag p {
+    font-size: 1.6rem;
     line-height: calc(24 / 16);
   }
   &__single-bottom {

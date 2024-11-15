@@ -12,6 +12,11 @@
     @include breakpoint(tablet) {
       width: 30%;
     }
+    @include breakpoint(pc) {
+      width: 31.7%;
+      text-align: left;
+      padding: 2.9rem 0 2.4rem 5rem;
+    }
   }
   & td {
     border: 1px solid black;
@@ -19,6 +24,10 @@
     padding: 29px 0 24px 29px;
     @include breakpoint(tablet) {
       width: 70%;
+    }
+    @include breakpoint(pc) {
+      width: calc(100% - 31.7%);
+      padding: 2.9rem 0 2.4rem 3rem;
     }
   }
 }
