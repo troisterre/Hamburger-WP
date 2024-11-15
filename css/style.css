@@ -442,6 +442,7 @@ li {
 }
 .p-contents__single-list, .p-contents__single-list-pl {
   margin-bottom: 17px;
+  font-size: 16px;
 }
 @media (min-width: 960px) {
   .p-contents__single-list, .p-contents__single-list-pl {
@@ -472,11 +473,12 @@ li {
   }
 }
 .p-contents__single-tag p {
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.5;
 }
 .p-contents__single-bottom {
   font-weight: 700;
+  font-size: 16px;
   line-height: 1.5;
   color: #3c2a10;
 }
@@ -843,6 +845,7 @@ li {
   align-items: center;
   margin: 60px 0 30px;
   line-height: 1.5;
+  font-size: 16px;
   background: linear-gradient(90deg, #f2ede9 0%, #ded8d3 100%);
 }
 @media (min-width: 560px) {
@@ -1027,6 +1030,9 @@ li {
   width: 100%;
   height: 100%;
 }
+.c-card__inner-single {
+  font-size: 16px;
+}
 
 .c-bar__close {
   cursor: pointer;
@@ -1140,13 +1146,13 @@ li {
     margin-bottom: 6rem;
   }
 }
+.c-quote__source {
+  font-size: 16px;
+  line-height: 23.76px;
+}
 .c-quote__link {
   text-decoration: line-through;
   color: #4a6c9b;
-  font-family: M1p;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23.76px;
   text-align: left;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -1177,6 +1183,7 @@ li {
 
 .c-table {
   width: 100%;
+  font-size: 16px;
   border-collapse: collapse;
   align-items: center;
   line-height: 1.5;
