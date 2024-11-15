@@ -103,4 +103,8 @@
       margin-bottom: 5.7rem;
     }
   }
+  &__fv-page {
+    @extend.c-title__fv-single;
+    margin: 0;
+  }
 }

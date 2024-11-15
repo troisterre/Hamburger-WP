@@ -58,12 +58,11 @@
   }
   // single.html //
   &__fv-single {
-    padding: 93px 39px 89px 26px;
     @include breakpoint(tablet) {
-      padding: 215px 0 201px 86px;
+      padding: 0 0 0 86px;
     }
     @include breakpoint(pc) {
-      padding: 213px 0 198px 86px;
+      padding: 0 0 0 8.6rem;
     }
   }
   &__contents-single {
@@ -88,6 +87,15 @@
     padding: 50px 59px 50px 49px;
     @include breakpoint(pc) {
       padding: 5rem;
+    }
+  }
+  // page.html //
+  &__fv-page {
+    @include breakpoint(tablet) {
+      padding: 0 0 0 86px;
+    }
+    @include breakpoint(pc) {
+      padding: 0 0 0 8.6rem;
     }
   }
 }
