@@ -11,23 +11,4 @@
     //width: 100%;
     z-index: 10;
   }
-  &__link li {
-    border-right: 2.7px solid $color-white;
-    padding: 0 10px;
-    //margin-bottom: 34px;
-  }
-
-  &__link li:last-child {
-    border: none;
-  }
-  &__link a {
-    color: $color-white;
-    font-size: 20px;
-    line-height: calc(29 / 20);
-  }
-  &__small {
-    font-size: 14px;
-    line-height: calc(20 / 14);
-    color: #ffffff;
-  }
 }

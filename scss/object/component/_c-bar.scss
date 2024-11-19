@@ -16,7 +16,6 @@
     position: absolute;
     top: 50%;
     width: 45px;
-
     height: 5px;
     transform: rotate(45deg);
     background-color: $color-fontColor;
@@ -29,5 +28,14 @@
     background-color: $color-fontColor;
     display: block;
     transform: rotate(90deg);
+  }
+  &__cross-bg {
+    @extend.c-bar__cross;
+    top: 5%;
+    right: 10%;
+    color: $color-black;
+  }
+  &__cross-bg::before {
+    @extend.c-bar__cross::before;
   }
 }
