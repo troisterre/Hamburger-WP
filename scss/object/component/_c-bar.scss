@@ -35,7 +35,4 @@
     right: 10%;
     color: $color-black;
   }
-  &__cross-bg::before {
-    @extend.c-bar__cross::before;
-  }
 }

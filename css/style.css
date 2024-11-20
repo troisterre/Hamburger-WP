@@ -1085,8 +1085,9 @@ li {
   transform: rotate(90deg);
 }
 .c-bar__cross-bg {
-  top: 0;
-  right: 5%;
+  top: 5%;
+  right: 10%;
+  color: #000000;
 }
 
 .c-pagination__sp {
