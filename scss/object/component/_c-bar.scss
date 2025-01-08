@@ -1,0 +1,38 @@
+@use "../../foundation/variable" as *;
+.c-bar {
+  &__close {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-bottom: 160px;
+    margin-left: 85%;
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+  &__cross {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 5px;
+    transform: rotate(45deg);
+    background-color: $color-fontColor;
+    display: block;
+  }
+  &__cross::before {
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: $color-fontColor;
+    display: block;
+    transform: rotate(90deg);
+  }
+  &__cross-bg {
+    @extend.c-bar__cross;
+    top: 5%;
+    right: 10%;
+    color: $color-black;
+  }
+}

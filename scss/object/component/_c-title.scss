@@ -1,0 +1,110 @@
+@use "../../foundation/variable" as *;
+.c-title {
+  &__header {
+    font-size: 40px;
+    line-height: calc(53 / 40);
+    color: $color-fontColor;
+    text-align: center;
+    margin-bottom: 38px;
+
+    @include breakpoint(pc) {
+      font-size: 64px;
+      line-height: calc(84 / 64);
+      margin-bottom: 0;
+    }
+  }
+  &__fv {
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-white;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    @include breakpoint(pc) {
+      display: block;
+      font-size: 4rem;
+    }
+  }
+  &__card {
+    font-size: 41px;
+    color: $color-white;
+    line-height: calc(54 / 41);
+    @include breakpoint(pc) {
+      font-size: 8rem;
+    }
+  }
+  &__map {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: calc(45 / 30);
+    color: $color-white;
+    @include breakpoint(pc) {
+      font-size: 36px;
+      line-height: calc(54 / 36);
+    }
+  }
+  &__sidebar {
+    display: none;
+    @include breakpoint(pc) {
+      display: block;
+      font-size: 3.4rem;
+      margin-bottom: 84px;
+      font-weight: 700;
+    }
+  }
+  //archive.html//
+  &__fv-archive {
+    color: $color-white;
+    position: absolute;
+    z-index: 30;
+    & h1 {
+      font-size: 36px;
+      line-height: calc(48 / 36);
+      margin-bottom: 7px;
+      @include breakpoint(tablet) {
+        margin-bottom: 0;
+      }
+    }
+    & p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: calc(24 / 16);
+    }
+  }
+  &__menuInfo {
+    font-size: 28px;
+    line-height: calc(42 / 28);
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  //single.html//
+  &__fv-single {
+    font-size: 36px;
+    color: $color-white;
+    font-weight: 700;
+    @include breakpoint(tablet) {
+      font-size: 60px;
+      line-height: calc(89 / 60);
+      margin: 0;
+    }
+  }
+  &__contents-single {
+    font-size: 28px;
+    line-height: calc(42 / 28);
+    margin-bottom: 25px;
+    color: $color-single;
+    @include breakpoint(tablet) {
+      font-size: 36px;
+      line-height: calc(54 / 36);
+      font-weight: 700;
+      margin-bottom: 55px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5.7rem;
+    }
+  }
+  &__fv-page {
+    @extend.c-title__fv-single;
+    margin: 0;
+  }
+}

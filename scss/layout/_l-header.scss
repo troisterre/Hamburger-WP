@@ -1,0 +1,12 @@
+@use "../foundation/variable" as *;
+
+.l-header {
+  background-color: $color-headerBc;
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  @include breakpoint(pc) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}

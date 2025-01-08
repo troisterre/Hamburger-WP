@@ -1,0 +1,47 @@
+@use "../../foundation/variable" as *;
+.c-pagination {
+  &__sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60.4px 0 0 0;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+  &__tablet {
+    display: none;
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 106.5px auto 0;
+    }
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+    margin-left: 4.29px;
+  }
+  &__arrow {
+    margin-left: 15px;
+  }
+  &__number {
+    font-size: 1.6rem;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $color-black;
+    display: flex;
+    background-color: $color-white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+  }
+  &__number:hover {
+    background-color: $color-card;
+    color: white;
+  }
+}

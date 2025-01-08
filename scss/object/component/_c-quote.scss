@@ -1,0 +1,35 @@
+@use "../../foundation/variable" as *;
+.c-quote {
+  background-color: $color-gray;
+  margin: 26px 0 30px;
+  @include breakpoint(tablet) {
+    margin: 56px 0 60px;
+  }
+  @include breakpoint(pc) {
+    margin: 5.6rem 0 6rem;
+  }
+  &__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    @include breakpoint(tablet) {
+      margin-bottom: 60px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 6rem;
+    }
+  }
+  &__source {
+    font-size: 16px;
+    line-height: 23.76px;
+  }
+  &__link {
+    text-decoration: line-through;
+    color: #4a6c9b;
+    text-align: left;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}

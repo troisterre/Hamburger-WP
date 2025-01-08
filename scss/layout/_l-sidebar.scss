@@ -1,0 +1,57 @@
+@use "../foundation/variable" as *;
+.l-sidebar {
+  width: 87.5%;
+  height: 100vh;
+  background-color: $color-sidebar;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  transform: translate(100%);
+  transition: all 1s; /* 移動する速さ */
+  overflow-y: scroll;
+
+  @include breakpoint(tablet) {
+    width: 44%;
+  }
+  @include breakpoint(pc) {
+    width: 20%;
+    height: auto;
+    transform: translate(0);
+    z-index: 0;
+  }
+  &.open {
+    transform: translate(0); /* right0まで-250px移動 */
+  }
+  &__menu {
+    margin-bottom: 40px;
+  }
+  &__menu dt {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+  &__lists {
+    margin-left: 20px;
+  }
+  &__lists li {
+    margin-bottom: 23px;
+    font-size: 2rem;
+    line-height: calc(29 / 20);
+  }
+  &__lists li:last-child {
+    margin-bottom: 0;
+  }
+  &__bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    transition: all 0.1s;
+  }
+}

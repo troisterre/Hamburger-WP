@@ -1,0 +1,130 @@
+@use "../../foundation/variable" as *;
+.p-contents {
+  color: $color-single;
+  &__text {
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    margin-bottom: 36px;
+    @include breakpoint(tablet) {
+      margin-bottom: 62px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 6rem;
+    }
+  }
+  h3 {
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    @include breakpoint(tablet) {
+      margin-bottom: 56px;
+      font-size: 28px;
+      line-height: calc(42 / 28);
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5.6rem;
+    }
+  }
+  h4 {
+    margin-bottom: 34px;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    @include breakpoint(tablet) {
+      margin-bottom: 73px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5.7rem;
+    }
+  }
+  h5 {
+    margin-bottom: 27px;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    @include breakpoint(tablet) {
+      margin-bottom: 57px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5.7rem;
+    }
+  }
+  h6 {
+    font-size: 20px;
+    line-height: calc(30 / 20);
+  }
+  &__image {
+    width: 100%;
+    height: 12.4rem;
+    @include breakpoint(tablet) {
+      height: 26.4rem;
+    }
+    @include breakpoint(pc) {
+      height: 50rem;
+    }
+  }
+  &__single-figure {
+    width: 43%;
+  }
+  &__single-figcaption {
+    width: 54.6%;
+  }
+  &__img-second {
+    width: 267px;
+    height: 166px;
+    display: block;
+    margin: 0 auto 30px auto;
+    @include breakpoint(tablet) {
+      width: 78%;
+      height: 100%;
+      margin: 0 auto 241px;
+    }
+    @include breakpoint(pc) {
+      width: 37.4%;
+      height: 35.8rem;
+      margin-bottom: 6rem;
+    }
+  }
+  &__single-lists {
+    margin: 33px 0 24px;
+    @include breakpoint(tablet) {
+      margin: 61px 0 57px;
+    }
+    @include breakpoint(pc) {
+      margin: 5.4rem 0 5.6rem 5rem;
+    }
+  }
+  &__single-list {
+    margin-bottom: 17px;
+    font-size: 16px;
+    @include breakpoint(pc) {
+      margin-bottom: 1.7rem;
+    }
+  }
+  &__single-list-pl {
+    @extend.p-contents__single-list;
+    padding-left: 18px;
+    @include breakpoint(pc) {
+      padding-left: 1.8rem;
+    }
+  }
+  &__single-tag {
+    background-color: #f5f5f5;
+    width: 100%;
+    margin-bottom: 30px;
+    @include breakpoint(tablet) {
+      margin-bottom: 60px;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__single-tag p {
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+  &__single-bottom {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: $color-single;
+  }
+}

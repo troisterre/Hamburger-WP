@@ -1,0 +1,101 @@
+@use "../../foundation/variable" as *;
+.c-inner {
+  margin: 0 auto;
+  &__header {
+    @extend.c-inner;
+    padding: 40px 31px 40px 24px;
+  }
+  &__fv {
+    @extend.c-inner;
+    padding: 117px 25px;
+  }
+  &__about {
+    @extend.c-inner;
+    padding: 20px 20px 49px 20px;
+    @include breakpoint(tablet) {
+      padding: 40px;
+    }
+  }
+  &__map {
+    @extend.c-inner;
+    padding: 40px 40px 51px 40px;
+    @include breakpoint(pc) {
+      padding: 8.3rem 73.7rem 4rem 11.9rem;
+    }
+  }
+  &__sidebar {
+    @extend.c-inner;
+    padding: 25px 17px 0 46px;
+    margin-bottom: auto;
+  }
+
+  &__footer {
+    @extend.c-inner;
+    height: 100%;
+    padding: 40px 0 34px;
+  }
+  //archive.html //
+  &__fv-archive {
+    padding: 102px 0 104px 37px;
+  }
+  &__menuInfo {
+    padding: 30px 18px;
+    @include breakpoint(tablet) {
+      padding: 39px 35px 32px 43px;
+    }
+    @include breakpoint(pc) {
+      padding: 6.3rem 10rem;
+    }
+  }
+  &__card-body {
+    padding: 31.5px 16px 43.6px;
+    @include breakpoint(tablet) {
+      padding: 31.5px 59px 40px 34.72px;
+    }
+    @include breakpoint(pc) {
+      padding: 5.6rem 10.4rem 6rem 6.3rem;
+    }
+  }
+  // single.html //
+  &__fv-single {
+    @include breakpoint(tablet) {
+      padding: 0 0 0 86px;
+    }
+    @include breakpoint(pc) {
+      padding: 0 0 0 8.6rem;
+    }
+  }
+  &__contents-single {
+    padding: 34px 20px 69px;
+    @include breakpoint(tablet) {
+      padding: 60px 60px 150px 60px;
+    }
+    @include breakpoint(pc) {
+      padding: 6.3rem 10rem 27.4rem 10rem;
+    }
+  }
+  &__quote {
+    padding: 30px 16px 27px 20px;
+    @include breakpoint(tablet) {
+      padding: 50px 56px 57px 50px;
+    }
+    @include breakpoint(pc) {
+      padding: 5rem 6rem 4.7rem 5rem;
+    }
+  }
+  &__single-tag {
+    padding: 50px 59px 50px 49px;
+    @include breakpoint(pc) {
+      padding: 5rem;
+    }
+  }
+  // page.html //
+  &__fv-page {
+    @include breakpoint(tablet) {
+      padding: 0 0 0 86px;
+    }
+    @include breakpoint(pc) {
+      padding: 0 0 0 8.6rem;
+    }
+  }
+}

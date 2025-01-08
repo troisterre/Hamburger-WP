@@ -1,0 +1,9 @@
+@use "../../foundation/variable" as *;
+.u-roboto {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  &__bold {
+    @extend.u-roboto;
+    font-weight: 700;
+  }
+}

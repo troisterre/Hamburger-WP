@@ -1,0 +1,35 @@
+@use "../../foundation/variable" as *;
+.c-search {
+  gap: 1.2rem;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url(../image/search-icon.png) no-repeat center center / auto 100%;
+    width: 24px;
+    height: 24px;
+    top: 25%;
+    left: 16px;
+  }
+  &__form {
+    width: 23rem;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid $color-black;
+    padding: 11px 16px 11px 50px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: #ffffff;
+
+    @include breakpoint(tablet) {
+      width: 396px;
+      gap: 1.4rem;
+    }
+    @include breakpoint(pc) {
+      width: 39.6rem;
+      gap: 1.3vw;
+      font-size: 24px;
+    }
+  }
+}

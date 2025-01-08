@@ -1,0 +1,27 @@
+$color-headerBc: #fff7ef;
+$color-fontColor: #707070;
+$color-white: #fffdfa;
+$colo-brown: #9d8670;
+$color-sidebar: #f2ede9;
+$color-card: #3c2b1c;
+$color-black: #000000;
+$color-gray: #f5f5f5;
+$color-single: #3c2a10;
+
+//breakpoint //
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: 560px) {
+      @content;
+    }
+  }
+  @if $point == pc {
+    @media (min-width: 960px) {
+      @content;
+    }
+  }
+}
+@include breakpoint(tablet) {
+}
+@include breakpoint(pc) {
+}

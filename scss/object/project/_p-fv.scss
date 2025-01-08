@@ -1,0 +1,60 @@
+@use "../../foundation/variable" as *;
+.p-fv {
+  background-image: url(/wp-content/themes/Hamburger-wp/image/mainvisual-sp@2x.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  @include breakpoint(tablet) {
+    background-image: url(/wp-content/themes/Hamburger-wp/image/mainvisual-pc@2x.jpg);
+  }
+
+  &__text {
+    position: absolute;
+    display: block;
+    color: $color-white;
+  }
+  //archive.html  //
+  &__archive {
+    height: 285px;
+    width: 100%;
+    background-color: #000000;
+    position: relative;
+    align-items: center;
+    @include breakpoint(pc) {
+      height: 239px;
+    }
+  }
+  &__archive::after {
+    content: "";
+    position: absolute;
+    background-image: url("/wp-content/themes/Hamburger-wp/image/mainvisual-sp@2x.jpg");
+    background-size: cover;
+    background-position: left;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  // single.html //
+  &__single {
+    @extend.p-fv;
+    background-image: url("../image/mainVisual_single.jpg");
+    height: 225px;
+    @include breakpoint(tablet) {
+      height: 505px;
+    }
+    @include breakpoint(pc) {
+      height: 500px;
+    }
+  }
+  // page.html //
+  &__page {
+    @extend.p-fv__single;
+    background-image: url("../image/mainVisual__single-pc.jpg");
+  }
+}

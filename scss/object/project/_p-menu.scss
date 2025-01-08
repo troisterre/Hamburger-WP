@@ -1,0 +1,43 @@
+@use "../../foundation/variable" as *;
+.p-menu {
+  &__sidebar {
+    margin-bottom: 40px;
+    &-title {
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+    }
+    &-lists {
+      margin-left: 20px;
+    }
+    &-list {
+      margin-bottom: 23px;
+      margin-left: 20px;
+      font-size: 2rem;
+      line-height: calc(29 / 20);
+    }
+    &-lists li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__footer {
+    color: $color-white;
+    li {
+      border-right: 2.7px solid $color-white;
+      padding: 0 10px;
+      //margin-bottom: 34px;
+    }
+
+    li:last-child {
+      border: none;
+    }
+    &-list a {
+      font-size: 20px;
+      line-height: calc(29 / 20);
+    }
+    &-small {
+      font-size: 14px;
+      line-height: calc(20 / 14);
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// base //
+@use "../foundation/variable" as *;
+html {
+  font-size: calc(1vw * 1000 / 375);
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  //height: 100%;
+  @include breakpoint(tablet) {
+    line-height: 1.2;
+    font-size: 1vw;
+  }
+  @include breakpoint(pc) {
+    font-size: calc(1vw * 1000 / 1920);
+  }
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #707070;
+  min-width: 320px;
+  height: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+li {
+  list-style: none;
+}

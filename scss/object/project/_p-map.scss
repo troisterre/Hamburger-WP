@@ -1,0 +1,49 @@
+@use "../../foundation/variable" as *;
+.p-map {
+  height: auto;
+  background-color: $color-black;
+  &__bg {
+    background-image: url("/image/map-sp.png");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+  }
+  &__transparent {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0 60%, rgba(0, 0, 0, 0.29) 60% 100%);
+    @include breakpoint(tablet) {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    @include breakpoint(pc) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0 60%, rgba(0, 0, 0, 0.29) 60% 100%);
+    }
+  }
+
+  &__bar {
+    display: block;
+    width: 75px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    @include breakpoint(pc) {
+      margin: 55.5px 0 63.5px;
+    }
+  }
+  &__text {
+    width: 100%;
+    height: auto;
+    @include breakpoint(tablet) {
+      height: auto;
+    }
+    @include breakpoint(pc) {
+      height: auto;
+    }
+  }
+  &__text p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: calc(33 / 14);
+    @include breakpoint(pc) {
+      font-size: 16px;
+      line-height: calc(33 / 16);
+    }
+  }
+}
