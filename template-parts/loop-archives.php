@@ -24,9 +24,10 @@
                      
                   <?php endwhile; ?>
                   <?php else: ?>
-                    <div class="">
+                    <div class="p-menuInfo__no-archive">
                       <p>検索結果はありませんでした。</p>
                       <p>申し訳ございませんが、<a href="<?php echo esc_url(home_url('/')); ?>">こちらのリンク</a> からトップページにお戻り下さい。</p>
+                  </div>
                   <?php endif; ?>
                 </ul>
                 </article>

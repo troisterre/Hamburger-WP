@@ -569,6 +569,11 @@ li {
     padding: 40px;
   }
 }
+@media (min-width: 960px) {
+  .c-inner__about {
+    padding: 12rem 12rem 13rem;
+  }
+}
 .c-inner__map {
   padding: 40px 40px 51px 40px;
 }
@@ -1340,14 +1345,14 @@ li {
   }
 }
 .u-flex__column-row {
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: stretch;
 }
 @media (min-width: 560px) {
   .u-flex__column-row {
     flex-direction: row;
-    gap: 40px;
+    gap: 4rem;
   }
 }
 .u-flex__column-between {
@@ -1893,4 +1898,15 @@ cd .p_comment {
   color: #fff;
   background: #4e91be;
   display: inline-block;
+}
+.p-menuInfo__no-archive {
+  margin: 10rem 0 10rem;
+}
+.p-menuInfo__no-archive p {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.p-menuInfo__no-archive a {
+  font-size: 2.5rem;
+  color: blue;
 }
