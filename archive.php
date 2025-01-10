@@ -17,7 +17,6 @@
             <section class="p-menuInfo">
               <div class="c-inner__menuInfo">
                 <?php get_template_part('template-parts/loop','archives'); ?> 
-              
                 <div class="c-pagination">
                   <div class="c-pagination__sp">
                     <span><< 前へ</span>
