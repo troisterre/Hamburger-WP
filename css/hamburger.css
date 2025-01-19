@@ -603,7 +603,7 @@ li {
 }
 @media (min-width: 960px) {
   .c-inner__menuInfo {
-    padding: 10em 12rem 6rem;
+    padding: 6rem 12rem;
   }
 }
 .c-inner__card-body {
@@ -2074,4 +2074,37 @@ li.bypostauthor {
     content: "";
     font-size: 0;
   }
+}
+.p-archive__title {
+  font-family: M + 1p;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 41.58px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3c2a10;
+  margin-bottom: 25px;
+}
+@media (min-width: 560px) {
+  .p-archive__title {
+    font-family: M + 1p;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 53.46px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 2rem;
+  }
+}
+.p-archive__text {
+  font-family: M + 1p;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.76px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3c2a10;
 }
