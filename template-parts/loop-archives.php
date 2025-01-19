@@ -21,22 +21,14 @@
                         </li>
                       </ul>
                     <?php endwhile; ?>
-                    <div class="c-pagination">
-                      <?php if (wp_is_mobile()): ?>
-                        <?php
-                        the_posts_navigation(array(
-                          'prev_text'          => __('<<前へ', 'hamburger-wp'),
-                          'next_text'          => __('次へ>>', 'hamburger-wp')
-                        ));
-                        ?>
-                      <?php else: ?>
-                        <?php wp_pagenavi(); ?>
-                      <?php endif; ?>
-                    </div>
+
                   <?php else: ?>
                     <div class="p-menuInfo__no-archive">
                       <p>検索結果はありませんでした。</p>
                       <p>申し訳ございませんが、<a href="<?php echo esc_url(home_url('/')); ?>">こちらのリンク</a> からトップページにお戻り下さい。</p>
                     </div>
                   <?php endif; ?>
+                  <?php if (function_exists('wp_pagenavi')) {
+                    wp_pagenavi();
+                  } ?>
                 </article>

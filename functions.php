@@ -14,6 +14,7 @@ function custom_theme_support()
   add_theme_support("wp-block-styles");
   add_theme_support('responsive-embeds');
   add_theme_support("align-wide");
+  add_theme_support("wp-pagenavi");
   add_theme_support('custom-logo', array(
     'width'                => 60,
     'height'               => 60,
