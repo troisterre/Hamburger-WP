@@ -28,6 +28,7 @@
                       <p>申し訳ございませんが、<a href="<?php echo esc_url(home_url('/')); ?>">こちらのリンク</a> からトップページにお戻り下さい。</p>
                     </div>
                   <?php endif; ?>
+                  <?php wp_link_pages(); ?>
                   <?php if (function_exists('wp_pagenavi')) {
                     wp_pagenavi();
                   } ?>
