@@ -13,16 +13,31 @@
       <?php endif; ?>
     </div>
   </section>
+
   <!-- /.p-fv__archive -->
   <section class="p-menuInfo">
-    <div class="c-inner__menuInfo">
-      <h3 class="p-archive__title">小見出しが入ります</h3>
-      <p class="p-archive__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキ ストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-      <?php get_template_part('template-parts/loop', 'archives'); ?>
-    </div>
-    <!-- /.c-inner__menuInfo -->
+    <?php if (is_archive()): ?>
+      <div class="c-inner__menuInfo">
+        <div>
+          <h3 class="p-archive__title">小見出しが入ります</ h3>
+            <p class="p-archive__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキ ストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <?php get_template_part('template-parts/loop', 'archives'); ?>
+        <?php wp_link_pages(); ?>
+        <?php if (function_exists('wp_pagenavi')) {
+          wp_pagenavi();
+        } ?>
+      <?php else: ?>
+        <div class="p-menuInfo__no-archive">
+          <p>検索結果はありませんでした。</p>
+          <p>申し訳ございませんが、<a href="<?php echo esc_url(home_url('/')); ?>">こちらのリンク</a> からトップページにお戻り下さい。</p>
+        </div>
+      <?php endif; ?>
+
+      <!-- /.c-inner__menuInfo -->
   </section>
   <!-- /.p-menuInfo -->
+
 
 </article>
 </div>
