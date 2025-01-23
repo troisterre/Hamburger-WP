@@ -3,7 +3,7 @@
   <section class="p-fv__archive c-inner__fv-archive">
     <div class="c-title__fv-archive u-flex__archive-fv">
       <h1>Search:</h1>
-      <p>404 NOT FOUND<span>ERROR</span></p>
+      <p class="uppercase">404 not found<span>error</span></p>
     </div>
   </section>
   <!-- /.p-fv__archive -->
