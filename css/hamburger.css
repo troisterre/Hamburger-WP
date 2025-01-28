@@ -24,14 +24,16 @@ html {
   box-sizing: border-box;
   scrollbar-width: none;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-size: 1.6rem;
   font-family: "M PLUS 1p", sans-serif;
   color: #707070;
   min-width: 320px;
   height: 100%;
-  overflow-x: hidden;
 }
 
 a {

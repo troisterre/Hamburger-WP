@@ -9,18 +9,19 @@ $(window).resize(function () {
 });
 
 $("#js-btn").on("click", function () {
-  //クリックされた時
-  //$("#js-bg").fadeIn("fast"); //#menu-bgの.openを削除
-  //activeがある時の処理
+  // activeがある時の処理
   if ($(this).hasClass("active")) {
-    $(this).removeClass("active"); //activeを削除
-    $(".l-sidebar").removeClass("open"); //#js-menuの.openを削除
-    $(".l-main__left").removeClass("fixed");
+    $(this).removeClass("active"); // activeを削除
+    $(".l-sidebar").removeClass("open"); // サイドバーを閉じる
+    $(".l-main__left").removeClass("fixed"); // メインコンテンツの固定解除
+    $("#js-bg").fadeOut("fast"); // 背景をフェードアウト
+    $("body").css("overflowX", "auto"); // スクロールを許可
   } else {
-    $(this).addClass("active"); //activeを追加
-    $("#js-bg").fadeIn("fast");
-    $(".l-sidebar").addClass("open");
-    $(".l-main__left").addClass("fixed");
+    $(this).addClass("active"); // activeを追加
+    $("#js-bg").fadeIn("fast"); // 背景をフェードイン
+    $(".l-sidebar").addClass("open"); // サイドバーを開く
+    $(".l-main__left").addClass("fixed"); // メインコンテンツを固定
+    $("body").css("overflowX", "hidden"); // スクロールを無効
   }
 });
 
