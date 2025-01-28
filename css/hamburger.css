@@ -71,7 +71,7 @@ li {
   height: auto;
   position: relative;
   box-sizing: border-box;
-  overflow: visible;
+  /*overflow: visible;*/
 }
 @media (min-width: 960px) {
   .l-main {
@@ -107,7 +107,7 @@ li {
   right: 0;
   z-index: 50;
   transform: translate(100%);
-  transition: all 1s; /* 移動する速さ */
+  transition: all 0.5s; /* 移動する速さ */
   overflow-y: scroll;
 }
 @media (min-width: 560px) {
