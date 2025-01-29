@@ -1168,6 +1168,9 @@ li {
     display: none;
   }
 }
+.c-bar__cross-bg {
+  position: relative;
+}
 .c-bar__cross::after,
 .c-bar__cross-bg::after {
   content: "";
