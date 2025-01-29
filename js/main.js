@@ -8,30 +8,53 @@ $(window).resize(function () {
   }
 });
 
-$("#js-btn").on("click", function () {
-  // activeがある時の処理
-  if ($(this).hasClass("active")) {
-    $(this).removeClass("active"); // activeを削除
-    $(".l-sidebar").removeClass("open"); // サイドバーを閉じる
-    $(".l-main__left").removeClass("fixed"); // メインコンテンツの固定解除
-    $("#js-bg").fadeOut("fast"); // 背景をフェードアウト
-    $("body").css("overflowX", "auto"); // スクロールを許可
-  } else {
-    $(this).addClass("active"); // activeを追加
-    $("#js-bg").fadeIn("fast"); // 背景をフェードイン
-    $(".l-sidebar").addClass("open"); // サイドバーを開く
-    $(".l-main__left").addClass("fixed"); // メインコンテンツを固定
-    $("body").css("overflowX", "hidden"); // スクロールを無効
-  }
-});
+function isPC() {
+  return window.innerWidth >= 960; // PCサイズの判定
+}
 
-$("#js-close").on("click", function () {
-  $("#js-bg").fadeOut();
-  if ($(this).hasClass("active")) {
-    $(this).addClass("active");
-  } else {
-    $(this).removeClass("active");
+$(document).ready(function () {
+  $("#js-btn").on("click", function () {
+    if (!isPC()) {
+      // PCではなく、スマホやタブレットのとき
+      if ($(this).hasClass("active")) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
+    }
+  });
+
+  $("#js-close, #js-bg").on("click", function () {
+    if (!isPC()) {
+      // PCではない場合のみ閉じる
+      closeSidebar();
+    }
+  });
+
+  function openSidebar() {
+    $("#js-btn").addClass("active");
+    $("#js-bg").fadeIn("fast");
+    /*$(".l-sidebar").addClass("open").animate({ width: getSidebarWidth() }, 500);*/
+    $(".l-sidebar").addClass("open").animate({ right: "0" }, 500);
+    $(".l-main__left").addClass("fixed");
+  }
+
+  function closeSidebar() {
+    $("#js-btn").removeClass("active");
+    $("#js-bg").fadeOut("fast");
+    /*$(".l-sidebar").animate({ width: "0" }, 500, function () {
+      $(this).removeClass("open");
+    });*/
+    $(".l-sidebar").removeClass("open").animate({ right: "-100%" }, 500);
     $(".l-main__left").removeClass("fixed");
-    $(".l-sidebar").removeClass("open");
+  }
+
+  function getSidebarWidth() {
+    var windowWidth = window.innerWidth;
+    if (windowWidth >= 560 && windowWidth < 960) {
+      return "44%"; // タブレット時の幅
+    } else {
+      return "87.5%"; // スマホ時の幅
+    }
   }
 });
