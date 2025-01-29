@@ -42,9 +42,6 @@ $(document).ready(function () {
   function closeSidebar() {
     $("#js-btn").removeClass("active");
     $("#js-bg").fadeOut("fast");
-    /*$(".l-sidebar").animate({ width: "0" }, 500, function () {
-      $(this).removeClass("open");
-    });*/
     $(".l-sidebar").removeClass("open").animate({ right: "-100%" }, 500);
     $(".l-main__left").removeClass("fixed");
   }

@@ -3,7 +3,7 @@
     <div class="c-inner__sidebar category_nav">
       <h4 class="c-title__sidebar u-roboto__bold">Menu</h4>
       <div class="c-bar__close" id="js-close">
-        <span class="c-bar__cross"></span>
+        <div class="c-bar__cross"></div>
       </div>
       <!-- /.c-bar__close -->
       <?php
